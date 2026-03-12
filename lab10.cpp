@@ -71,6 +71,20 @@ double gRec(unsigned i) {
  * The result of 1.1n + 3.2, where n is the depth of recursion
 *******************************************************************************/
 
-double gStack(unsigned i) {
+double gStack(unsigned n) {
     // TODO
+    double total =0;
+    ArrayStack<double> stack1;
+    while(n !=0)
+    {
+        stack1.push(1.1);
+        n--;
+    }
+
+    while(!stack1.isEmpty())
+    {
+        total += stack1.peek();
+        stack1.pop();
+    }
+    return total + 3.2;
 }
